@@ -44,6 +44,15 @@ namespace Praktiukum_Week_8
             this.cBoxKiri = new System.Windows.Forms.ComboBox();
             this.cBoxKanan = new System.Windows.Forms.ComboBox();
             this.labelVS = new System.Windows.Forms.Label();
+            this.dGVPertandingan = new System.Windows.Forms.DataGridView();
+            this.buttonCheck = new System.Windows.Forms.Button();
+            this.labelValueKiri = new System.Windows.Forms.Label();
+            this.labelValueKanan = new System.Windows.Forms.Label();
+            this.labelTanggal = new System.Windows.Forms.Label();
+            this.labelSkor = new System.Windows.Forms.Label();
+            this.labelTanggalOutput = new System.Windows.Forms.Label();
+            this.labelSkorOutput = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPertandingan)).BeginInit();
             this.SuspendLayout();
             // 
             // labelManagerKiri
@@ -181,11 +190,94 @@ namespace Praktiukum_Week_8
             this.labelVS.TabIndex = 14;
             this.labelVS.Text = "VS";
             // 
+            // dGVPertandingan
+            // 
+            this.dGVPertandingan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVPertandingan.Location = new System.Drawing.Point(12, 444);
+            this.dGVPertandingan.Name = "dGVPertandingan";
+            this.dGVPertandingan.RowHeadersWidth = 51;
+            this.dGVPertandingan.RowTemplate.Height = 24;
+            this.dGVPertandingan.Size = new System.Drawing.Size(771, 320);
+            this.dGVPertandingan.TabIndex = 15;
+            this.dGVPertandingan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVPertandingan_CellContentClick);
+            // 
+            // buttonCheck
+            // 
+            this.buttonCheck.Location = new System.Drawing.Point(299, 309);
+            this.buttonCheck.Name = "buttonCheck";
+            this.buttonCheck.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheck.TabIndex = 16;
+            this.buttonCheck.Text = "Check";
+            this.buttonCheck.UseVisualStyleBackColor = true;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // labelValueKiri
+            // 
+            this.labelValueKiri.AutoSize = true;
+            this.labelValueKiri.Location = new System.Drawing.Point(43, 63);
+            this.labelValueKiri.Name = "labelValueKiri";
+            this.labelValueKiri.Size = new System.Drawing.Size(46, 17);
+            this.labelValueKiri.TabIndex = 17;
+            this.labelValueKiri.Text = "label1";
+            // 
+            // labelValueKanan
+            // 
+            this.labelValueKanan.AutoSize = true;
+            this.labelValueKanan.Location = new System.Drawing.Point(491, 63);
+            this.labelValueKanan.Name = "labelValueKanan";
+            this.labelValueKanan.Size = new System.Drawing.Size(46, 17);
+            this.labelValueKanan.TabIndex = 18;
+            this.labelValueKanan.Text = "label2";
+            // 
+            // labelTanggal
+            // 
+            this.labelTanggal.AutoSize = true;
+            this.labelTanggal.Location = new System.Drawing.Point(267, 352);
+            this.labelTanggal.Name = "labelTanggal";
+            this.labelTanggal.Size = new System.Drawing.Size(68, 17);
+            this.labelTanggal.TabIndex = 19;
+            this.labelTanggal.Text = "Tanggal :";
+            // 
+            // labelSkor
+            // 
+            this.labelSkor.AutoSize = true;
+            this.labelSkor.Location = new System.Drawing.Point(290, 382);
+            this.labelSkor.Name = "labelSkor";
+            this.labelSkor.Size = new System.Drawing.Size(45, 17);
+            this.labelSkor.TabIndex = 20;
+            this.labelSkor.Text = "Skor :";
+            // 
+            // labelTanggalOutput
+            // 
+            this.labelTanggalOutput.AutoSize = true;
+            this.labelTanggalOutput.Location = new System.Drawing.Point(356, 352);
+            this.labelTanggalOutput.Name = "labelTanggalOutput";
+            this.labelTanggalOutput.Size = new System.Drawing.Size(46, 17);
+            this.labelTanggalOutput.TabIndex = 21;
+            this.labelTanggalOutput.Text = "label3";
+            // 
+            // labelSkorOutput
+            // 
+            this.labelSkorOutput.AutoSize = true;
+            this.labelSkorOutput.Location = new System.Drawing.Point(356, 382);
+            this.labelSkorOutput.Name = "labelSkorOutput";
+            this.labelSkorOutput.Size = new System.Drawing.Size(46, 17);
+            this.labelSkorOutput.TabIndex = 22;
+            this.labelSkorOutput.Text = "label4";
+            // 
             // FormPertandingan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 314);
+            this.ClientSize = new System.Drawing.Size(795, 776);
+            this.Controls.Add(this.labelSkorOutput);
+            this.Controls.Add(this.labelTanggalOutput);
+            this.Controls.Add(this.labelSkor);
+            this.Controls.Add(this.labelTanggal);
+            this.Controls.Add(this.labelValueKanan);
+            this.Controls.Add(this.labelValueKiri);
+            this.Controls.Add(this.buttonCheck);
+            this.Controls.Add(this.dGVPertandingan);
             this.Controls.Add(this.labelVS);
             this.Controls.Add(this.cBoxKanan);
             this.Controls.Add(this.cBoxKiri);
@@ -204,6 +296,7 @@ namespace Praktiukum_Week_8
             this.Name = "FormPertandingan";
             this.Text = "Hasil Pertandingan";
             this.Load += new System.EventHandler(this.FormPertandingan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVPertandingan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +319,14 @@ namespace Praktiukum_Week_8
         private System.Windows.Forms.ComboBox cBoxKiri;
         private System.Windows.Forms.ComboBox cBoxKanan;
         private System.Windows.Forms.Label labelVS;
+        private System.Windows.Forms.DataGridView dGVPertandingan;
+        private System.Windows.Forms.Button buttonCheck;
+        private System.Windows.Forms.Label labelValueKiri;
+        private System.Windows.Forms.Label labelValueKanan;
+        private System.Windows.Forms.Label labelTanggal;
+        private System.Windows.Forms.Label labelSkor;
+        private System.Windows.Forms.Label labelTanggalOutput;
+        private System.Windows.Forms.Label labelSkorOutput;
     }
 }
 
